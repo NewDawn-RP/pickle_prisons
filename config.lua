@@ -570,19 +570,19 @@ Config.Prisons = {
                     {
                         name = "WEAPON_SWITCHBLADE",
                         description = "A great tool to take out your enemies.",
-                        amount = 1,
+                        amount = 1500,
                         required = {
-                            {type = "item", name = "wood", amount = 1},
-                            {type = "item", name = "metal", amount = 1},
+                            {type = "item", name = "wooden_stick", amount = 1},
+                            {type = "item", name = "iron_rod", amount = 1},
                         }
                     },
                     {
                         name = "shovel",
                         description = "Maybe I could use this to escape...",
-                        amount = 1,
+                        amount = 1000,
                         required = {
-                            {type = "item", name = "wood", amount = 1},
-                            {type = "item", name = "metal", amount = 1},
+                            {type = "item", name = "wooden_stick", amount = 1},
+                            {type = "item", name = "iron_rod", amount = 1},
                             {type = "item", name = "rope", amount = 1},
                         }
                     },
@@ -592,27 +592,27 @@ Config.Prisons = {
         },
         lootables = {
             {
-                label = "Wood", -- Lootable Label.
+                label = "Tige de bois", -- Lootable Label.
                 coords = vector3(1627.9252, 2539.87, 45.7227),
                 heading = 277.6246,
                 model = {modelType = "prop", hash = `prop_cons_plank`},
                 regenTime = 5, -- Time after redemption it can be redeemed again.
                 rewards = { -- Rewards for redeeming the lootable.
-                    {type = "item", name = "wood", amount = 1},
+                    {type = "item", name = "wooden_stick", amount = 1},
                 },
             },
             {
-                label = "Metal",
+                label = "Tige de fer",
                 coords = vector3(1776.5386, 2563.7231, 45.57),
                 heading = 1.5599,
                 model = {modelType = "prop", hash = `prop_ladel`, offset = vector3(0.0, 0.0, 1.0)},
                 regenTime = 5, -- Time after redemption it can be redeemed again.
                 rewards = { -- Rewards for redeeming the lootable.
-                    {type = "item", name = "metal", amount = 1},
+                    {type = "item", name = "iron_rod", amount = 1},
                 },
             },
             {
-                label = "Rope",
+                label = "Corde",
                 coords = vector3(1689.0037, 2548.8884, 45.5604),
                 heading = 35.3041,
                 model = {modelType = "prop", hash = `prop_rope_family_3`},
