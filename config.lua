@@ -45,15 +45,15 @@ Config.XPCategories = { -- Registered XP Types for Pickle's XP.
 Config.Default = {
     permissions = { -- Permissions settings for jailing, unjailing, and other things.
         jail = {
-            jobs = {["police"] = 0, ["corrections"] = 0}, -- ["job_name"] = rank_number, ["job_name2"] = rank_number2,
+            jobs = {["police"] = 0, ["bcso"] = 0}, -- ["job_name"] = rank_number, ["job_name2"] = rank_number2,
             groups = {"admin", "superadmin"} -- "group1", "group2"
         },
         unjail = {
-            jobs = {["police"] = 2, ["corrections"] = 2},
+            jobs = {["police"] = 2, ["bcso"] = 2},
             groups = {"admin", "superadmin"}
         },
         alert = {
-            jobs = {["police"] = 0, ["corrections"] = 0},
+            jobs = {["police"] = 0, ["bcso"] = 0},
             groups = {"admin", "superadmin"}
         },
     },
@@ -330,7 +330,7 @@ Config.Breakout = {
     time = 120, -- In seconds, at the end of this time, the tunnel will close for other people to climb into.
     model = {modelType = "prop", hash = `prop_rock_1_i`, offset = vector3(0.0, 0.0, -0.2)},
     required = {
-        {type = "item", name = "shovel", amount = 1},
+        {type = "item", name = "water", amount = 1},
     }, 
     process = function(data)
         local ped = PlayerPedId()
@@ -367,14 +367,14 @@ end
 
 Config.Prisons = {
     ["default"] = { -- Default is used as the prison location for players when not defined otherwise.
-        label = "Boilingbroke Penitentiary", -- Prison label for notifications & texts.
-        coords = vector3(1691.8187, 2604.5383, 45.5648), -- Location of the prison.
+        label = "Pénitentier Boilingbroke", -- Prison label for notifications & texts.
+        coords = vector3(1846.1836, 2585.8325, 45.6726), -- Location of the prison.
         radius = 250.0, -- This is the radius that prisoners will be freed at when exceeding this number. 
         permissions = nil, -- When nil, defaults to Config.Default.permissions.  
         outfit = nil, -- When nil, defaults to Config.Default.outfit.  
         blip = {
-            label = "Boilingbroke Penitentiary",
-            coords = vector3(1691.8187, 2604.5383, 45.5648),
+            label = "Pénitentier Boilingbroke",
+            coords = vector3(1846.1836, 2585.8325, 45.6726),
             id = 188,
             color = 44,
             scale = 0.85,

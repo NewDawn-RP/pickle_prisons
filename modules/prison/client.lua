@@ -69,7 +69,7 @@ function JailDialog()
     local prisons = {}
     for i=1, #players do
         local id = GetPlayerServerId(players[i])
-        players_list[#players_list + 1] = {label = _L("jail_dialog_player", GetPlayerName(players[i]), id), value = id}
+        players_list[#players_list + 1] = {label = _L("jail_dialog_player", Player(id).state.name, id), value = id}
     end
     for k,v in pairs(Config.Prisons) do 
         prisons[#prisons + 1] = {label = v.label, value = k}
