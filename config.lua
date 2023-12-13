@@ -156,7 +156,7 @@ Config.Activities = {
                 end
             },
             ["pushup"] = {
-                label = "Pushups",
+                label = "Pompes",
                 rewards = { -- Rewards for completing the section.
                     {type = "xp", name = "strength", amount = 1000},
                 },
@@ -180,7 +180,7 @@ Config.Activities = {
                 end
             },
             ["pullup"] = {
-                label = "Pull-ups",
+                label = "Tractions",
                 rewards = { -- Rewards for completing the section.
                     {type = "xp", name = "strength", amount = 1000},
                 },
@@ -207,10 +207,10 @@ Config.Activities = {
         }
     },
     ["clean"] = {
-        label = "Cleaning Prison", -- Will have Start / Stop in front of interaction.
+        label = "Nettoyage Prison", -- Will have Start / Stop in front of interaction.
         sections = { -- Sections for this activity.
             ["sweep"] = {
-                label = "Sweep Floor",
+                label = "Laver le sol",
                 rewards = { -- Rewards for completing the section.
                     {type = "cash", amount = 50},
                 },
@@ -233,10 +233,10 @@ Config.Activities = {
         }
     },
     ["kitchen"] = {
-        label = "Kitchen Job", -- Will have Start / Stop in front of interaction.
+        label = "Cuisine", -- Will have Start / Stop in front of interaction.
         sections = { -- Sections for this activity.
             ["stock"] = {
-                label = "Collect Ingredients",
+                label = "Récupérer ingrédients",
                 rewards = nil, -- Rewards for completing the section.
                 process = function(data) -- Section function. 
                     local ped = PlayerPedId()
@@ -250,7 +250,7 @@ Config.Activities = {
                 end
             },
             ["cook"] = {
-                label = "Cook Food",
+                label = "Cuisiner",
                 rewards = nil, -- Rewards for completing the section.
                 process = function(data) -- Section function. 
                     local ped = PlayerPedId()
@@ -271,7 +271,7 @@ Config.Activities = {
                 end
             },
             ["toppings"] = {
-                label = "Add Toppings",
+                label = "Ajouter Assaisonnements",
                 rewards = nil, -- Rewards for completing the section.
                 process = function(data) -- Section function. 
                     local ped = PlayerPedId()
@@ -285,7 +285,7 @@ Config.Activities = {
                 end
             },
             ["delivery"] = {
-                label = "Deliver Food",
+                label = "Livrer plats",
                 rewards = {-- Rewards for completing the section.
                     {type = "cash", amount = 200},
                     {type = "xp", name = "cooking", amount = 1000},  
