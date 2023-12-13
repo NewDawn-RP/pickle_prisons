@@ -359,9 +359,9 @@ Config.Breakout = {
 Config.Alerts = function(index, disabled)
     local prison = Config.Prisons[index]
     if (not disabled) then
-        ShowNotification("The prison siren has been activated at " .. prison.label .. "!")
+        ShowNotification("L'alarme de la prison " .. prison.label .. " a été déclanchée!")
     else
-        ShowNotification("The prison siren has been turned-off at " .. prison.label .. ".")
+        ShowNotification("L'alarme de la prison  " .. prison.label .. "a été arrêtée.")
     end
 end
 
@@ -538,7 +538,7 @@ Config.Prisons = {
         },
         stores = {
             {
-                label = "Prison Commissary",
+                label = "Magasin Prison",
                 coords = vector3(1779.5208, 2560.6865, 45.6731),
                 heading = 173.8729,
                 model = {hash = `s_m_y_chef_01`},
@@ -569,7 +569,7 @@ Config.Prisons = {
                 catalog = {
                     {
                         name = "WEAPON_SWITCHBLADE",
-                        description = "A great tool to take out your enemies.",
+                        description = "Un bon outil pour se débarrasser de vos ennemis.",
                         amount = 1500,
                         required = {
                             {type = "item", name = "wooden_stick", amount = 1},
@@ -578,7 +578,7 @@ Config.Prisons = {
                     },
                     {
                         name = "shovel",
-                        description = "Maybe I could use this to escape...",
+                        description = "Je pourrai peut-être utiliser ça pour m'évader...",
                         amount = 1000,
                         required = {
                             {type = "item", name = "wooden_stick", amount = 1},
@@ -592,7 +592,7 @@ Config.Prisons = {
         },
         lootables = {
             {
-                label = "Tige de bois", -- Lootable Label.
+                label = "Bâton", -- Lootable Label.
                 coords = vector3(1627.9252, 2539.87, 45.7227),
                 heading = 277.6246,
                 model = {modelType = "prop", hash = `prop_cons_plank`},
