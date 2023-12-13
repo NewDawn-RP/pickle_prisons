@@ -99,6 +99,7 @@ RegisterNetEvent("pickle_prisons:startBreakout", function(index)
             if not result then return end
             local coords = prison.breakout.enter.coords
             local heading = prison.breakout.enter.heading
+            exports["ps-dispatch-esx"]:PrisonBreak(prison.coords)
             TriggerServerEvent("pickle_prisons:breakout")
             TriggerEvent("pickle_prisons:leavePrison")
             WarpPlayer(coords, heading)
