@@ -327,10 +327,11 @@ Config.UnrevokedItems = { -- Items to skip when confiscating the player's invent
 
 Config.Breakout = {
     alert = true, -- This will start the siren, and notify all law enforcement with permission.
-    time = 120, -- In seconds, at the end of this time, the tunnel will close for other people to climb into.
+    time = 190, -- In seconds, at the end of this time, the tunnel will close for other people to climb into.
     model = {modelType = "prop", hash = `prop_rock_1_i`, offset = vector3(0.0, 0.0, -0.2)},
     required = {
-        {type = "item", name = "water", amount = 1},
+        {type = "item", name = "shovel", amount = 1},
+        {type = "item", name = "rope", amount = 10},
     }, 
     process = function(data)
         local ped = PlayerPedId()
@@ -479,7 +480,7 @@ Config.Prisons = {
                 model = {hash = `s_m_y_chef_01`},
                 coords = vector3(1787.3306, 2562.6624, 45.6731),
                 heading = 111.6702,
-                randomSection = false, -- Chooses random section when true, or top-to-bottom when false.
+                randomSection = true, -- Chooses random section when true, or top-to-bottom when false.
                 sections = {
                     {
                         name = "stock",
@@ -570,20 +571,20 @@ Config.Prisons = {
                     {
                         name = "WEAPON_SWITCHBLADE",
                         description = "Un bon outil pour se débarrasser de vos ennemis.",
-                        amount = 1500,
+                        amount = 1,
                         required = {
-                            {type = "item", name = "wooden_stick", amount = 1},
-                            {type = "item", name = "iron_rod", amount = 1},
+                            {type = "item", name = "wooden_stick", amount = 5},
+                            {type = "item", name = "iron_rod", amount = 20},
                         }
                     },
                     {
                         name = "shovel",
                         description = "Je pourrai peut-être utiliser ça pour m'évader...",
-                        amount = 1000,
+                        amount = 1,
                         required = {
-                            {type = "item", name = "wooden_stick", amount = 1},
-                            {type = "item", name = "iron_rod", amount = 1},
-                            {type = "item", name = "rope", amount = 1},
+                            {type = "item", name = "wooden_stick", amount = 10},
+                            {type = "item", name = "iron_rod", amount = 20},
+                            {type = "item", name = "rope", amount = 5},
                         }
                     },
                 }
@@ -596,7 +597,7 @@ Config.Prisons = {
                 coords = vector3(1627.9252, 2539.87, 45.7227),
                 heading = 277.6246,
                 model = {modelType = "prop", hash = `prop_cons_plank`},
-                regenTime = 5, -- Time after redemption it can be redeemed again.
+                regenTime = 15, -- Time after redemption it can be redeemed again.
                 rewards = { -- Rewards for redeeming the lootable.
                     {type = "item", name = "wooden_stick", amount = 1},
                 },
@@ -606,7 +607,7 @@ Config.Prisons = {
                 coords = vector3(1776.5386, 2563.7231, 45.57),
                 heading = 1.5599,
                 model = {modelType = "prop", hash = `prop_ladel`, offset = vector3(0.0, 0.0, 1.0)},
-                regenTime = 5, -- Time after redemption it can be redeemed again.
+                regenTime = 15, -- Time after redemption it can be redeemed again.
                 rewards = { -- Rewards for redeeming the lootable.
                     {type = "item", name = "iron_rod", amount = 1},
                 },
@@ -616,7 +617,7 @@ Config.Prisons = {
                 coords = vector3(1689.0037, 2548.8884, 45.5604),
                 heading = 35.3041,
                 model = {modelType = "prop", hash = `prop_rope_family_3`},
-                regenTime = 5, -- Time after redemption it can be redeemed again.
+                regenTime = 20, -- Time after redemption it can be redeemed again.
                 rewards = { -- Rewards for redeeming the lootable.
                     {type = "item", name = "rope", amount = 1},
                 },
