@@ -60,9 +60,9 @@ Config.Default = {
     outfit = { -- Prisoner outfits to set when in jail. Please change this according to your server's clothing numbers.
         male = {
             ['arms'] = 0,
-            ['tshirt_1'] = 15, 
+            ['tshirt_1'] = 15,
             ['tshirt_2'] = 0,
-            ['torso_1'] = 86, 
+            ['torso_1'] = 26, 
             ['torso_2'] = 0,
             ['bproof_1'] = 0,
             ['bproof_2'] = 0,
@@ -70,11 +70,11 @@ Config.Default = {
             ['decals_2'] = 0,
             ['chain_1'] = 0,
             ['chain_2'] = 0,
-            ['pants_1'] = 10, 
+            ['pants_1'] = 86,
             ['pants_2'] = 2,
-            ['shoes_1'] = 56, 
-            ['shoes_2'] = 0,
-            ['helmet_1'] = 14, 
+            ['shoes_1'] = 38, 
+            ['shoes_2'] = 9,
+            ['helmet_1'] = -1, 
             ['helmet_2'] = 0,
         },
         female = {
@@ -212,7 +212,7 @@ Config.Activities = {
             ["sweep"] = {
                 label = "Laver le sol",
                 rewards = { -- Rewards for completing the section.
-                    {type = "cash", amount = 50},
+                    {type = "cash", amount = 2},
                 },
                 process = function(data) -- Section function. 
                     local ped = PlayerPedId()
@@ -287,8 +287,8 @@ Config.Activities = {
             ["delivery"] = {
                 label = "Livrer plats",
                 rewards = {-- Rewards for completing the section.
-                    {type = "cash", amount = 200},
-                    {type = "xp", name = "cooking", amount = 1000},  
+                    {type = "cash", amount = 5},
+                    {type = "xp", name = "cooking", amount = 1000},
                 },
                 process = function(data) -- Section function. 
                     local ped = PlayerPedId()
@@ -327,7 +327,7 @@ Config.UnrevokedItems = { -- Items to skip when confiscating the player's invent
 
 Config.Breakout = {
     alert = true, -- This will start the siren, and notify all law enforcement with permission.
-    time = 190, -- In seconds, at the end of this time, the tunnel will close for other people to climb into.
+    time = 120, -- In seconds, at the end of this time, the tunnel will close for other people to climb into.
     model = {modelType = "prop", hash = `prop_rock_1_i`, offset = vector3(0.0, 0.0, -0.2)},
     required = {
         {type = "item", name = "shovel", amount = 1},
@@ -564,8 +564,8 @@ Config.Prisons = {
             },
             {
                 label = "Prison Plug",
-                coords = vector3(1598.1722, 2550.0127, 45.5649),
-                heading = 287.9169,
+                coords = vector3(1631.8064, 2528.2556, 45.5649),
+                heading = 35.4072,
                 model = {hash = `s_m_y_prisoner_01`},
                 catalog = {
                     {
