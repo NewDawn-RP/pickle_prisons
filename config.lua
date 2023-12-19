@@ -212,7 +212,8 @@ Config.Activities = {
             ["sweep"] = {
                 label = "Laver le sol",
                 rewards = { -- Rewards for completing the section.
-                    {type = "cash", amount = 2},
+                    --{type = "cash", amount = 2},
+                    {type = "prison_ticket", amount = 1},
                 },
                 process = function(data) -- Section function. 
                     local ped = PlayerPedId()
@@ -287,8 +288,9 @@ Config.Activities = {
             ["delivery"] = {
                 label = "Livrer plats",
                 rewards = {-- Rewards for completing the section.
-                    {type = "cash", amount = 5},
-                    {type = "xp", name = "cooking", amount = 1000},
+                    --{type = "cash", amount = 5},
+                    {type = "prison_ticket", amount = 5},
+                    --{type = "xp", name = "cooking", amount = 1000},
                 },
                 process = function(data) -- Section function. 
                     local ped = PlayerPedId()
@@ -549,7 +551,8 @@ Config.Prisons = {
                         description = "A great hamburger that is slightly edible.",
                         amount = 1,
                         required = {
-                            {type = "cash", amount = 20},
+                            --{type = "cash", amount = 20},
+                            {type = "prison_ticket", amount = 20},
                         }
                     },
                     {
@@ -557,7 +560,8 @@ Config.Prisons = {
                         description = "Refreshing sink water that'll quench your thirst.",
                         amount = 1,
                         required = {
-                            {type = "cash", amount = 20},
+                            --{type = "cash", amount = 20},
+                            {type = "prison_ticket", amount = 20},
                         }
                     },
                 }
@@ -575,7 +579,8 @@ Config.Prisons = {
                         required = {
                             {type = "item", name = "wooden_stick", amount = 5},
                             {type = "item", name = "iron_rod", amount = 20},
-                            {type = "cash", amount = 100},
+                            --{type = "cash", amount = 100},
+                            {type = "prison_ticket", amount = 100},
                         }
                     },
                     {
@@ -586,6 +591,7 @@ Config.Prisons = {
                             {type = "item", name = "wooden_stick", amount = 15},
                             {type = "item", name = "iron_rod", amount = 20},
                             {type = "item", name = "rope", amount = 10},
+                            {type = "prison_ticket", amount = 25},
                         }
                     },
                 }
