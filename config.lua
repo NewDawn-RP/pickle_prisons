@@ -331,7 +331,7 @@ Config.Breakout = {
     model = {modelType = "prop", hash = `prop_rock_1_i`, offset = vector3(0.0, 0.0, -0.2)},
     required = {
         {type = "item", name = "shovel", amount = 1},
-        {type = "item", name = "rope", amount = 10},
+        {type = "item", name = "rope", amount = 15},
     }, 
     process = function(data)
         local ped = PlayerPedId()
@@ -549,7 +549,7 @@ Config.Prisons = {
                         description = "A great hamburger that is slightly edible.",
                         amount = 1,
                         required = {
-                            {type = "cash", amount = 100},
+                            {type = "cash", amount = 20},
                         }
                     },
                     {
@@ -557,7 +557,7 @@ Config.Prisons = {
                         description = "Refreshing sink water that'll quench your thirst.",
                         amount = 1,
                         required = {
-                            {type = "cash", amount = 100},
+                            {type = "cash", amount = 20},
                         }
                     },
                 }
@@ -575,6 +575,7 @@ Config.Prisons = {
                         required = {
                             {type = "item", name = "wooden_stick", amount = 5},
                             {type = "item", name = "iron_rod", amount = 20},
+                            {type = "cash", amount = 100},
                         }
                     },
                     {
@@ -582,9 +583,9 @@ Config.Prisons = {
                         description = "Je pourrai peut-être utiliser ça pour m'évader...",
                         amount = 1,
                         required = {
-                            {type = "item", name = "wooden_stick", amount = 10},
+                            {type = "item", name = "wooden_stick", amount = 15},
                             {type = "item", name = "iron_rod", amount = 20},
-                            {type = "item", name = "rope", amount = 5},
+                            {type = "item", name = "rope", amount = 10},
                         }
                     },
                 }
@@ -597,7 +598,7 @@ Config.Prisons = {
                 coords = vector3(1627.9252, 2539.87, 45.7227),
                 heading = 277.6246,
                 model = {modelType = "prop", hash = `prop_cons_plank`},
-                regenTime = 15, -- Time after redemption it can be redeemed again.
+                regenTime = 20, -- Time after redemption it can be redeemed again.
                 rewards = { -- Rewards for redeeming the lootable.
                     {type = "item", name = "wooden_stick", amount = 1},
                 },
@@ -607,7 +608,7 @@ Config.Prisons = {
                 coords = vector3(1776.5386, 2563.7231, 45.57),
                 heading = 1.5599,
                 model = {modelType = "prop", hash = `prop_ladel`, offset = vector3(0.0, 0.0, 1.0)},
-                regenTime = 15, -- Time after redemption it can be redeemed again.
+                regenTime = 20, -- Time after redemption it can be redeemed again.
                 rewards = { -- Rewards for redeeming the lootable.
                     {type = "item", name = "iron_rod", amount = 1},
                 },
