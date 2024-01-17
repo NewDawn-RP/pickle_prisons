@@ -13,12 +13,14 @@ end
 function GetPlayersInArea(coords, radius)
     local coords = coords or GetEntityCoords(PlayerPedId())
     local radius = radius or 3.0
-    local list = ESX.Game.GetPlayersInArea(coords, radius)
+    --local list = ESX.Game.GetPlayersInArea(coords, radius)
+    local list = lib.getNearbyPlayers(coords, maxDistance, true)
     local players = {}
     for _, player in pairs(list) do 
-        if player ~= PlayerId() then
-            players[#players + 1] = player
-        end
+        -- if player ~= PlayerId() then
+        --     players[#players + 1] = player
+        -- end
+        players[#players + 1] = player.id
     end
     return players
 end

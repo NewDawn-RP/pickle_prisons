@@ -78,7 +78,7 @@ function StartSection(activityIndex, sectionIndex)
                 local dist = #(section.coords-pcoords)
                 local meters = math.ceil(dist * 1)
                 if EnableInteraction then
-                    DrawDestination(section.coords, "Activity", meters)
+                    DrawDestination(section.coords, "Activité", meters)
                 end
                 Wait(0)
             end

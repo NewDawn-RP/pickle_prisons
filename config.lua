@@ -4,11 +4,11 @@ Config.Debug = true
 
 Config.Language = "fr" -- Language to use.
 
-Config.RenderDistance = 20.0 -- Model Display Radius.
+Config.RenderDistance = 30.0 -- Model Display Radius.
 
-Config.InteractDistance = 2.0 -- Interact Radius
+Config.InteractDistance = 1.5 -- Interact Radius
 
-Config.UseTarget = true -- When set to true, it'll use targeting instead of key-presses to interact.
+Config.UseTarget = false -- When set to true, it'll use targeting instead of key-presses to interact.
 
 Config.NoModelTargeting = true -- When set to true and using Target, it'll spawn a small invisible prop so you can third-eye when no entity is defined.
 
@@ -213,7 +213,7 @@ Config.Activities = {
                 label = "Laver le sol",
                 rewards = { -- Rewards for completing the section.
                     --{type = "cash", amount = 2},
-                    {type = "prison_ticket", amount = 1},
+                    {type = "item", name = "prison_ticket", amount = 1},
                 },
                 process = function(data) -- Section function. 
                     local ped = PlayerPedId()
@@ -224,7 +224,7 @@ Config.Activities = {
                     local prop = CreateProp(`prop_tool_broom`, data.coords.x, data.coords.y, data.coords.z + 1.0, true, true, false)
                     local off, rot = vector3(-0.01, 0.04, -0.03), vector3(0.0, 0.0, 0.0)
                     AttachEntityToEntity(prop, ped, GetPedBoneIndex(ped, 28422), off.x, off.y, off.z, rot.x, rot.y, rot.z, false, false, false, true, 2, true)
-                    Wait(3000)
+                    Wait(15000)
                     FreezeEntityPosition(ped, false)
                     ClearPedTasks(ped)
                     DeleteEntity(prop)
@@ -289,7 +289,7 @@ Config.Activities = {
                 label = "Livrer plats",
                 rewards = {-- Rewards for completing the section.
                     --{type = "cash", amount = 5},
-                    {type = "prison_ticket", amount = 5},
+                    {type = "item", name = "prison_ticket", amount = 5},
                     --{type = "xp", name = "cooking", amount = 1000},
                 },
                 process = function(data) -- Section function. 
@@ -482,7 +482,7 @@ Config.Prisons = {
                 model = {hash = `s_m_y_chef_01`},
                 coords = vector3(1787.3306, 2562.6624, 45.6731),
                 heading = 111.6702,
-                randomSection = true, -- Chooses random section when true, or top-to-bottom when false.
+                randomSection = false, -- Chooses random section when true, or top-to-bottom when false.
                 sections = {
                     {
                         name = "stock",
@@ -552,7 +552,7 @@ Config.Prisons = {
                         amount = 1,
                         required = {
                             --{type = "cash", amount = 20},
-                            {type = "prison_ticket", amount = 20},
+                            {type = "item", name = "prison_ticket", amount = 20},
                         }
                     },
                     {
@@ -561,7 +561,7 @@ Config.Prisons = {
                         amount = 1,
                         required = {
                             --{type = "cash", amount = 20},
-                            {type = "prison_ticket", amount = 20},
+                            {type = "item", name = "prison_ticket", amount = 20},
                         }
                     },
                 }
@@ -580,7 +580,7 @@ Config.Prisons = {
                             {type = "item", name = "wooden_stick", amount = 5},
                             {type = "item", name = "iron_rod", amount = 20},
                             --{type = "cash", amount = 100},
-                            {type = "prison_ticket", amount = 100},
+                            {type = "item", name = "prison_ticket", amount = 100},
                         }
                     },
                     {
@@ -591,7 +591,7 @@ Config.Prisons = {
                             {type = "item", name = "wooden_stick", amount = 15},
                             {type = "item", name = "iron_rod", amount = 20},
                             {type = "item", name = "rope", amount = 10},
-                            {type = "prison_ticket", amount = 25},
+                            {type = "item", name = "prison_ticket", amount = 25},
                         }
                     },
                 }

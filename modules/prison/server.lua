@@ -351,6 +351,7 @@ RegisterCommand("jailmenu", function(source, args, raw)
             allowed = true
         end
     end
+    print(allowed)
     if not allowed then 
         ShowNotification(source, _L("no_permission"))
     else
